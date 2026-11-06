@@ -1,0 +1,50 @@
+% review_setup.tex -- packages needed by Sections 1-3 and the review-build machinery (brief Section 7).
+% The switch \ifreview is declared in the main file. \reviewfalse gives the clean build:
+% no colour, no margin notes, no banners, no Notes box, no todo notes.
+
+\usepackage[numbers,sort&compress]{natbib}  % \citet/\citep used by the Related Work draft
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{array,tabularx,multirow}
+\usepackage[most]{tcolorbox}
+\ifreview
+  \usepackage[textsize=tiny,color=orange!25,bordercolor=orange!60]{todonotes}
+\else
+  \usepackage[disable]{todonotes}
+\fi
+
+% margin notes need room in the 1in margins of PRIMEarxiv
+\AtBeginDocument{\setlength{\marginparwidth}{0.82in}\setlength{\marginparsep}{0.08in}}
+
+\definecolor{revclaim}{RGB}{0,72,186}     % method and claim changes
+\definecolor{revword}{RGB}{140,120,170}   % wording fixes that change no claim (lighter)
+\definecolor{revdec}{RGB}{196,96,0}       % open decisions D1-D9
+\definecolor{revbanner}{RGB}{226,236,250}
+
+% \rev{text}: method or claim change. \revw{text}: wording fix only.
+\newcommand{\rev}[1]{\ifreview{\color{revclaim}#1}\else#1\fi}
+\newcommand{\revw}[1]{\ifreview{\color{revword}#1}\else#1\fi}
+% \revwhy{source}: margin note naming the source of the change (brief / review / v5.1 section, or REF-n).
+\newcommand{\revwhy}[1]{\ifreview\leavevmode\marginpar{\raggedright\tiny\sffamily\color{revclaim}#1}\fi}
+\newcommand{\revwhyw}[1]{\ifreview\leavevmode\marginpar{\raggedright\tiny\sffamily\color{revword}#1}\fi}
+% \revdel{what}: marks a deletion from the baseline text, which colour cannot show.
+\newcommand{\revdel}[1]{\ifreview\leavevmode\marginpar{\raggedright\tiny\sffamily\color{red!70!black}deleted: #1}\fi}
+% \dec{Dn}{text}: text written with the default of open decision Dn.
+\newcommand{\dec}[2]{\ifreview{\color{revdec}#2}\textsuperscript{\tiny\sffamily\color{revdec}[#1]}\else#2\fi}
+
+% Banner at the start of a section written new against the baseline.
+\newcommand{\newsectionbanner}[1]{%
+  \ifreview
+  \begin{tcolorbox}[colback=revbanner,colframe=revclaim!60,boxrule=0.4pt,arc=1pt,left=4pt,right=4pt,top=2pt,bottom=2pt,fontupper=\footnotesize\sffamily]
+  \textbf{New section.} #1
+  \end{tcolorbox}
+  \fi}
+
+% Notes box, first page of the review build only.
+\newtcolorbox{reviewnotes}{breakable,enhanced,colback=orange!4,colframe=revdec!70,boxrule=0.5pt,arc=1pt,
+  left=5pt,right=5pt,top=3pt,bottom=3pt,fontupper=\scriptsize,title={\sffamily\small Notes for the authors (review build only)},
+  fonttitle=\bfseries}
+
+\newcommand{\mask}{\operatorname{mask}}
+\newcommand{\EM}{\mathrm{EM}}
+\newcommand{\ED}{\mathrm{ED}}

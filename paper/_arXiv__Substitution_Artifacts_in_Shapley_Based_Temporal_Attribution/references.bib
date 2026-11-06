@@ -1,0 +1,572 @@
+% references.bib — audited 2026-11-03, revised 2026-11-05 (see notes/REFERENCES_AUDIT.md for the entry log and the claim log REF-n).
+% Style: unsrtnat (keeps doi/url). arXiv preprints: misc entries with howpublished = \emph{arXiv preprint} arXiv:XXXX.
+
+% ---------------------------------------------------------------------------------------------
+% Template placeholder entries (cited only by the template's demo section). Verified and corrected.
+% ---------------------------------------------------------------------------------------------
+@inproceedings{kour2014real,
+  title     = {Real-Time Segmentation of On-Line Handwritten {Arabic} Script},
+  author    = {Kour, George and Saabne, Raid},
+  booktitle = {2014 14th International Conference on Frontiers in Handwriting Recognition (ICFHR)},
+  pages     = {417--422},
+  year      = {2014},
+  publisher = {IEEE},
+  doi       = {10.1109/ICFHR.2014.76}
+}
+
+@inproceedings{kour2014fast,
+  title     = {Fast Classification of Handwritten On-Line {Arabic} Characters},
+  author    = {Kour, George and Saabne, Raid},
+  booktitle = {2014 6th International Conference of Soft Computing and Pattern Recognition (SoCPaR)},
+  pages     = {312--318},
+  year      = {2014},
+  publisher = {IEEE},
+  doi       = {10.1109/SOCPAR.2014.7008025}
+}
+
+@misc{hadash2018estimate,
+  title        = {Estimate and Replace: A Novel Approach to Integrating Deep Neural Networks with Existing Applications},
+  author       = {Hadash, Guy and Kermany, Einat and Carmeli, Boaz and Lavi, Ofer and Kour, George and Jacovi, Alon},
+  howpublished = {\emph{arXiv preprint} arXiv:1804.09028},
+  year         = {2018}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Shapley values and removal-based explanation
+% ---------------------------------------------------------------------------------------------
+@incollection{shapley1953value,
+  title     = {A Value for n-Person Games},
+  author    = {Shapley, L. S.},
+  booktitle = {Contributions to the Theory of Games, Volume {II}},
+  series    = {Annals of Mathematics Studies},
+  number    = {28},
+  pages     = {307--318},
+  publisher = {Princeton University Press},
+  year      = {1953},
+  doi       = {10.1515/9781400881970-018}
+}
+
+@inproceedings{lundberg2017unified,
+  title     = {A Unified Approach to Interpreting Model Predictions},
+  author    = {Lundberg, Scott M. and Lee, Su-In},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {30},
+  pages     = {4765--4774},
+  publisher = {Curran Associates, Inc.},
+  year      = {2017}
+}
+
+@article{covert2021explaining,
+  title   = {Explaining by Removing: A Unified Framework for Model Explanation},
+  author  = {Covert, Ian and Lundberg, Scott and Lee, Su-In},
+  journal = {Journal of Machine Learning Research},
+  volume  = {22},
+  number  = {209},
+  pages   = {1--90},
+  year    = {2021}
+}
+
+@inproceedings{sundararajan2020many,
+  title     = {The Many {Shapley} Values for Model Explanation},
+  author    = {Sundararajan, Mukund and Najmi, Amir},
+  booktitle = {Proceedings of the 37th International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {119},
+  pages     = {9269--9278},
+  publisher = {PMLR},
+  year      = {2020}
+}
+
+@inproceedings{sundararajan2017axiomatic,
+  title     = {Axiomatic Attribution for Deep Networks},
+  author    = {Sundararajan, Mukund and Taly, Ankur and Yan, Qiqi},
+  booktitle = {Proceedings of the 34th International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {70},
+  pages     = {3319--3328},
+  publisher = {PMLR},
+  year      = {2017}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Value functions on and off the data manifold
+% ---------------------------------------------------------------------------------------------
+@inproceedings{frye2021shapley,
+  title     = {Shapley Explainability on the Data Manifold},
+  author    = {Frye, Christopher and de Mijolla, Damien and Begley, Tom and Cowton, Laurence and Stanley, Megan and Feige, Ilya},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2021}
+}
+
+@article{aas2021explaining,
+  title   = {Explaining Individual Predictions when Features are Dependent: More Accurate Approximations to {Shapley} Values},
+  author  = {Aas, Kjersti and Jullum, Martin and L{\o}land, Anders},
+  journal = {Artificial Intelligence},
+  volume  = {298},
+  pages   = {103502},
+  year    = {2021},
+  doi     = {10.1016/j.artint.2021.103502}
+}
+
+@misc{chen2020true,
+  title        = {True to the Model or True to the Data?},
+  author       = {Chen, Hugh and Janizek, Joseph D. and Lundberg, Scott and Lee, Su-In},
+  howpublished = {\emph{arXiv preprint} arXiv:2006.16234},
+  year         = {2020}
+}
+
+@inproceedings{janzing2020feature,
+  title     = {Feature Relevance Quantification in Explainable {AI}: A Causal Problem},
+  author    = {Janzing, Dominik and Minorics, Lenon and Bl{\"o}baum, Patrick},
+  booktitle = {Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {108},
+  pages     = {2907--2916},
+  publisher = {PMLR},
+  year      = {2020}
+}
+
+@inproceedings{yeh2022threading,
+  title     = {Threading the Needle of On and Off-Manifold Value Functions for {Shapley} Explanations},
+  author    = {Yeh, Chih-Kuan and Lee, Kuan-Yun and Liu, Frederick and Ravikumar, Pradeep},
+  booktitle = {Proceedings of the 25th International Conference on Artificial Intelligence and Statistics},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {151},
+  pages     = {1485--1502},
+  publisher = {PMLR},
+  year      = {2022}
+}
+
+@article{hooker2021unrestricted,
+  title   = {Unrestricted Permutation Forces Extrapolation: Variable Importance Requires at Least One More Model, or There Is No Free Variable Importance},
+  author  = {Hooker, Giles and Mentch, Lucas and Zhou, Siyu},
+  journal = {Statistics and Computing},
+  volume  = {31},
+  number  = {6},
+  pages   = {82},
+  year    = {2021},
+  doi     = {10.1007/s11222-021-10057-z}
+}
+
+% ---------------------------------------------------------------------------------------------
+% What a background explains
+% ---------------------------------------------------------------------------------------------
+@inproceedings{merrick2020explanation,
+  title     = {The Explanation Game: Explaining Machine Learning Models Using {Shapley} Values},
+  author    = {Merrick, Luke and Taly, Ankur},
+  booktitle = {Machine Learning and Knowledge Extraction (CD-MAKE 2020)},
+  series    = {Lecture Notes in Computer Science},
+  pages     = {17--38},
+  publisher = {Springer International Publishing},
+  year      = {2020},
+  doi       = {10.1007/978-3-030-57321-8_2}
+}
+
+@article{mamalakis2023carefully,
+  title   = {Carefully Choose the Baseline: Lessons Learned from Applying {XAI} Attribution Methods for Regression Tasks in Geoscience},
+  author  = {Mamalakis, Antonios and Barnes, Elizabeth A. and Ebert-Uphoff, Imme},
+  journal = {Artificial Intelligence for the Earth Systems},
+  volume  = {2},
+  number  = {1},
+  year    = {2023},
+  doi     = {10.1175/AIES-D-22-0058.1}
+}
+
+@article{sturmfels2020visualizing,
+  title   = {Visualizing the Impact of Feature Attribution Baselines},
+  author  = {Sturmfels, Pascal and Lundberg, Scott and Lee, Su-In},
+  journal = {Distill},
+  volume  = {5},
+  number  = {1},
+  year    = {2020},
+  doi     = {10.23915/distill.00022}
+}
+
+@misc{haug2021baselines,
+  title        = {On Baselines for Local Feature Attributions},
+  author       = {Haug, Johannes and Z{\"u}rn, Stefan and El-Jiz, Peter and Kasneci, Gjergji},
+  howpublished = {\emph{arXiv preprint} arXiv:2101.00905},
+  year         = {2021}
+}
+
+@article{chen2022explaining,
+  title   = {Explaining a Series of Models by Propagating {Shapley} Values},
+  author  = {Chen, Hugh and Lundberg, Scott M. and Lee, Su-In},
+  journal = {Nature Communications},
+  volume  = {13},
+  number  = {1},
+  pages   = {4512},
+  year    = {2022},
+  doi     = {10.1038/s41467-022-31384-3}
+}
+
+@misc{zhang2026baselines,
+  title        = {From Baselines to Transport Geodesics: Axiomatic Attribution via Optimal Generative Flows},
+  author       = {Zhang, Cenwei and Zhu, Lin and Lin, Manxi and You, Lei},
+  howpublished = {\emph{arXiv preprint} arXiv:2603.05093},
+  year         = {2026}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Masking artifacts and infilling in images
+% ---------------------------------------------------------------------------------------------
+@inproceedings{jain2022missingness,
+  title     = {Missingness Bias in Model Debugging},
+  author    = {Jain, Saachi and Salman, Hadi and Wong, Eric and Zhang, Pengchuan and Vineet, Vibhav and Vemprala, Sai and Madry, Aleksander},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2022}
+}
+
+@inproceedings{fong2017interpretable,
+  title     = {Interpretable Explanations of Black Boxes by Meaningful Perturbation},
+  author    = {Fong, Ruth C. and Vedaldi, Andrea},
+  booktitle = {2017 IEEE International Conference on Computer Vision (ICCV)},
+  pages     = {3449--3457},
+  publisher = {IEEE},
+  year      = {2017},
+  doi       = {10.1109/ICCV.2017.371}
+}
+
+@inproceedings{chang2019explaining,
+  title     = {Explaining Image Classifiers by Counterfactual Generation},
+  author    = {Chang, Chun-Hao and Creager, Elliot and Goldenberg, Anna and Duvenaud, David},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2019}
+}
+
+@inproceedings{agarwal2021explaining,
+  title     = {Explaining Image Classifiers by Removing Input Features Using Generative Models},
+  author    = {Agarwal, Chirag and Nguyen, Anh},
+  booktitle = {Computer Vision -- ACCV 2020},
+  series    = {Lecture Notes in Computer Science},
+  pages     = {101--118},
+  publisher = {Springer International Publishing},
+  year      = {2021},
+  doi       = {10.1007/978-3-030-69544-6_7}
+}
+
+@misc{sridhar2026missingness,
+  title        = {Missingness Bias Calibration in Feature Attribution Explanations},
+  author       = {Sridhar, Shailesh and Xue, Anton and Wong, Eric},
+  howpublished = {\emph{arXiv preprint} arXiv:2603.04831},
+  year         = {2026}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Time-series perturbation methods
+% ---------------------------------------------------------------------------------------------
+@inproceedings{tonekaboni2020went,
+  title     = {What Went Wrong and When? {Instance-Wise} Feature Importance for Time-Series Black-Box Models},
+  author    = {Tonekaboni, Sana and Joshi, Shalmali and Campbell, Kieran and Duvenaud, David K. and Goldenberg, Anna},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {33},
+  pages     = {799--809},
+  publisher = {Curran Associates, Inc.},
+  year      = {2020}
+}
+
+@inproceedings{crabbe2021explaining,
+  title     = {Explaining Time Series Predictions with Dynamic Masks},
+  author    = {Crabb{\'e}, Jonathan and van der Schaar, Mihaela},
+  booktitle = {Proceedings of the 38th International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {139},
+  pages     = {2166--2177},
+  publisher = {PMLR},
+  year      = {2021}
+}
+
+@inproceedings{enguehard2023learning,
+  title     = {Learning Perturbations to Explain Time Series Predictions},
+  author    = {Enguehard, Joseph},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {202},
+  pages     = {9329--9342},
+  publisher = {PMLR},
+  year      = {2023}
+}
+
+@inproceedings{liu2024explaining,
+  title     = {Explaining Time Series via Contrastive and Locally Sparse Perturbations},
+  author    = {Liu, Zichuan and Zhang, Yingying and Wang, Tianchun and Wang, Zefan and Luo, Dongsheng and Du, Mengnan and Wu, Min and Wang, Yi and Chen, Chunlin and Fan, Lunting and Wen, Qingsong},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2024}
+}
+
+@inproceedings{kim2026deltaxai,
+  title     = {{Delta-XAI}: A Unified Framework for Explaining Prediction Changes in Online Time Series Monitoring},
+  author    = {Kim, Changhun and Mun, Yechan and Jang, Hyeongwon and Lee, Eunseo and Hahn, Sangchul and Yang, Eunho},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2026}
+}
+
+@misc{menadjiev2026grail,
+  title        = {{GRAIL}: From Saliency to Semantics in Time-Series Explanation},
+  author       = {Menadjiev, Enver and Shen, Yiqiu and Choi, Jaesik and Stoyanovich, Julia},
+  howpublished = {\emph{arXiv preprint} arXiv:2610.29036},
+  year         = {2026}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Temporal Shapley methods
+% ---------------------------------------------------------------------------------------------
+@inproceedings{bento2021timeshap,
+  title     = {{TimeSHAP}: Explaining Recurrent Models through Sequence Perturbations},
+  author    = {Bento, Jo{\~a}o and Saleiro, Pedro and Cruz, Andr{\'e} F. and Figueiredo, M{\'a}rio A. T. and Bizarro, Pedro},
+  booktitle = {Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery \& Data Mining},
+  pages     = {2565--2573},
+  publisher = {Association for Computing Machinery},
+  year      = {2021},
+  doi       = {10.1145/3447548.3467166}
+}
+
+@article{nayebi2023windowshap,
+  title   = {{WindowSHAP}: An Efficient Framework for Explaining Time-Series Classifiers Based on {Shapley} Values},
+  author  = {Nayebi, Amin and Tipirneni, Sindhu and Reddy, Chandan K. and Foreman, Brandon and Subbian, Vignesh},
+  journal = {Journal of Biomedical Informatics},
+  volume  = {144},
+  pages   = {104438},
+  year    = {2023},
+  doi     = {10.1016/j.jbi.2023.104438}
+}
+
+@inproceedings{nguyen2025tshap,
+  title     = {{TSHAP}: Fast and Exact {SHAP} for Explaining Time Series Classification and Regression},
+  author    = {Le Nguyen, Thach and Ifrim, Georgiana},
+  booktitle = {Machine Learning and Knowledge Discovery in Databases. Research Track (ECML PKDD 2025)},
+  series    = {Lecture Notes in Computer Science},
+  pages     = {60--77},
+  publisher = {Springer Nature Switzerland},
+  year      = {2025},
+  doi       = {10.1007/978-3-032-06078-5_4}
+}
+
+@inproceedings{kim2026groupsegment,
+  title     = {{GroupSegment-SHAP}: {Shapley} Value Explanations with Group-Segment Players for Multivariate Time Series},
+  author    = {Kim, Jinwoong and Park, Sangjin},
+  booktitle = {Proceedings of the 35th ACM International Conference on Information and Knowledge Management (CIKM '26)},
+  pages     = {2138--2149},
+  publisher = {Association for Computing Machinery},
+  year      = {2026},
+  doi       = {10.1145/3799682.3840928}
+}
+
+@inproceedings{papadeas2026empirical,
+  title     = {An Empirical Evaluation of Factors Affecting {SHAP} Explanation of Time Series Classification},
+  author    = {Papadeas, Nikos and Serramazza, Davide Italo and Abdallah, Zahraa and Ifrim, Georgiana},
+  booktitle = {Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2025 Workshops)},
+  series    = {Communications in Computer and Information Science},
+  pages     = {458--473},
+  publisher = {Springer Nature Switzerland},
+  year      = {2026},
+  doi       = {10.1007/978-3-032-19105-2_32}
+}
+
+@misc{zhao2026tempshap,
+  title        = {{TempShap}: When and How Much a Feature Matters in Time-Series Forecasting},
+  author       = {Zhao, Chi and Chelnokova, Anastasiia and Liu, Jing and Parilina, Elena},
+  howpublished = {\emph{arXiv preprint} arXiv:2610.33330},
+  year         = {2026}
+}
+
+% ---------------------------------------------------------------------------------------------
+% XAI in industry and prognostics; evaluation of attribution
+% ---------------------------------------------------------------------------------------------
+@article{cummins2024explainable,
+  title   = {Explainable Predictive Maintenance: A Survey of Current Methods, Challenges and Opportunities},
+  author  = {Cummins, Logan and Sommers, Alexander and Ramezani, Somayeh Bakhtiari and Mittal, Sudip and Jabour, Joseph and Seale, Maria and Rahimi, Shahram},
+  journal = {IEEE Access},
+  volume  = {12},
+  pages   = {57574--57602},
+  year    = {2024},
+  doi     = {10.1109/ACCESS.2024.3391130}
+}
+
+@article{saarela2024recent,
+  title   = {Recent Applications of Explainable {AI} ({XAI}): A Systematic Literature Review},
+  author  = {Saarela, Mirka and Podgorelec, Vili},
+  journal = {Applied Sciences},
+  volume  = {14},
+  number  = {19},
+  pages   = {8884},
+  year    = {2024},
+  doi     = {10.3390/app14198884}
+}
+
+@article{arabzadeh2025four,
+  title   = {A Four-Dimensional Analysis of Explainable {AI} in Energy Forecasting: A Domain-Specific Systematic Review},
+  author  = {Arabzadeh, Vahid and Frank, Raphael},
+  journal = {Machine Learning and Knowledge Extraction},
+  volume  = {7},
+  number  = {4},
+  pages   = {153},
+  year    = {2025},
+  doi     = {10.3390/make7040153}
+}
+
+@article{qu2026explainable,
+  title   = {Explainable {AI} for Remaining Useful Life Prediction in Industrial Systems: A Survey},
+  author  = {Qu, Qilin and Zhang, Lei and Zheng, Ying},
+  journal = {Measurement Science and Technology},
+  volume  = {37},
+  number  = {4},
+  pages   = {042002},
+  year    = {2026},
+  doi     = {10.1088/1361-6501/ae319f}
+}
+
+@article{turbe2023evaluation,
+  title   = {Evaluation of Post-Hoc Interpretability Methods in Time-Series Classification},
+  author  = {Turb{\'e}, Hugues and Bjelogrlic, Mina and Lovis, Christian and Mengaldo, Gianmarco},
+  journal = {Nature Machine Intelligence},
+  volume  = {5},
+  number  = {3},
+  pages   = {250--260},
+  year    = {2023},
+  doi     = {10.1038/s42256-023-00620-w}
+}
+
+@article{simic2025comprehensive,
+  title   = {A Comprehensive Analysis of Perturbation Methods in Explainable {AI} Feature Attribution Validation for Neural Time Series Classifiers},
+  author  = {{\v{S}}imi{\'c}, Ilija and Veas, Eduardo and Sabol, Vedran},
+  journal = {Scientific Reports},
+  volume  = {15},
+  number  = {1},
+  pages   = {26607},
+  year    = {2025},
+  doi     = {10.1038/s41598-025-09538-2}
+}
+
+@inproceedings{baer2026class,
+  title     = {Why do Class-Dependent Evaluation Effects Occur with Time Series Feature Attributions? {A} Synthetic Data Investigation},
+  author    = {Baer, Gregor and Grau, Isel and Zhang, Chao and Van Gorp, Pieter},
+  booktitle = {Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2025 Workshops)},
+  series    = {Communications in Computer and Information Science},
+  pages     = {380--395},
+  publisher = {Springer Nature Switzerland},
+  year      = {2026},
+  doi       = {10.1007/978-3-032-19105-2_27}
+}
+
+@inproceedings{ismail2020benchmarking,
+  title     = {Benchmarking Deep Learning Interpretability in Time Series Predictions},
+  author    = {Ismail, Aya Abdelsalam and Gunady, Mohamed and Corrada Bravo, H{\'e}ctor and Feizi, Soheil},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {33},
+  pages     = {6441--6452},
+  publisher = {Curran Associates, Inc.},
+  year      = {2020}
+}
+
+@inproceedings{queen2023encoding,
+  title     = {Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency},
+  author    = {Queen, Owen and Hartvigsen, Thomas and Koker, Teddy and He, Huan and Tsiligkaridis, Theodoros and Zitnik, Marinka},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {36},
+  pages     = {32129--32159},
+  publisher = {Curran Associates, Inc.},
+  year      = {2023},
+  doi       = {10.52202/075280-1395}
+}
+
+@misc{baer2026xaitimesynth,
+  title        = {xaitimesynth: A {Python} Package for Evaluating Attribution Methods for Time Series with Synthetic Ground Truth},
+  author       = {Baer, Gregor},
+  howpublished = {\emph{arXiv preprint} arXiv:2603.06781},
+  year         = {2026}
+}
+
+@misc{esteban2017real,
+  title        = {Real-Valued (Medical) Time Series Generation with Recurrent Conditional {GANs}},
+  author       = {Esteban, Crist{\'o}bal and Hyland, Stephanie L. and R{\"a}tsch, Gunnar},
+  howpublished = {\emph{arXiv preprint} arXiv:1706.02633},
+  year         = {2017}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Authors' own work
+% ---------------------------------------------------------------------------------------------
+% TODO: arXiv identifier of DegradX not yet assigned; fill "arXiv:XXXX.XXXXX" when known (brief §5.3).
+@misc{degradx2026,
+  title        = {{DegradX}: A Dataset-Calibrated Synthetic Testbed for Attribution Evaluation on Degrading Systems},
+  author       = {Mishchuk, Myroslav and Cupek, Rafa{\l} and Pavliuk, Olena},
+  howpublished = {\emph{arXiv preprint} arXiv:XXXX.XXXXX},
+  year         = {2026}
+}
+
+@misc{degradxrepo,
+  title        = {{DegradX}: generator, fitted profiles, trained models and scoring code},
+  author       = {Mishchuk, Myroslav},
+  howpublished = {GitHub repository, commit f5bba50},
+  url          = {https://github.com/Myroslav437/degradx},
+  year         = {2026}
+}
+
+@inproceedings{mishchuk2026explaining,
+  title     = {Explaining {LSTM} Battery {RUL} Prediction via Temporal Attribution},
+  author    = {Mishchuk, Myroslav and Cupek, Rafa{\l} and Pavliuk, Olena},
+  booktitle = {Intelligent Information and Database Systems (ACIIDS 2026)},
+  series    = {Lecture Notes in Computer Science},
+  pages     = {216--231},
+  publisher = {Springer Nature Singapore},
+  year      = {2026},
+  doi       = {10.1007/978-981-92-0071-9_15}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Datasets
+% ---------------------------------------------------------------------------------------------
+@article{severson2019data,
+  title   = {Data-Driven Prediction of Battery Cycle Life before Capacity Degradation},
+  author  = {Severson, Kristen A. and Attia, Peter M. and Jin, Norman and Perkins, Nicholas and Jiang, Benben and Yang, Zi and Chen, Michael H. and Aykol, Muratahan and Herring, Patrick K. and Fraggedakis, Dimitrios and Bazant, Martin Z. and Harris, Stephen J. and Chueh, William C. and Braatz, Richard D.},
+  journal = {Nature Energy},
+  volume  = {4},
+  number  = {5},
+  pages   = {383--391},
+  year    = {2019},
+  doi     = {10.1038/s41560-019-0356-8}
+}
+
+@article{ma2022real,
+  title   = {Real-Time Personalized Health Status Prediction of Lithium-Ion Batteries Using Deep Transfer Learning},
+  author  = {Ma, Guijun and Xu, Songpei and Jiang, Benben and Cheng, Cheng and Yang, Xin and Shen, Yue and Yang, Tao and Huang, Yunhui and Ding, Han and Yuan, Ye},
+  journal = {Energy \& Environmental Science},
+  volume  = {15},
+  number  = {10},
+  pages   = {4083--4094},
+  year    = {2022},
+  doi     = {10.1039/D2EE01676A}
+}
+
+@article{cui2024data,
+  title   = {Data-Driven Analysis of Battery Formation Reveals the Role of Electrode Utilization in Extending Cycle Life},
+  author  = {Cui, Xiao and Kang, Stephen Dongmin and Wang, Sunny and Rose, Justin A. and Lian, Huada and Geslin, Alexis and Torrisi, Steven B. and Bazant, Martin Z. and Sun, Shijing and Chueh, William C.},
+  journal = {Joule},
+  volume  = {8},
+  number  = {11},
+  pages   = {3072--3087},
+  year    = {2024},
+  doi     = {10.1016/j.joule.2024.07.024}
+}
+
+@misc{saha2007battery,
+  title        = {Battery Data Set},
+  author       = {Saha, B. and Goebel, K.},
+  howpublished = {NASA Prognostics Data Repository, NASA Ames Research Center, Moffett Field, CA},
+  year         = {2007}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Models
+% ---------------------------------------------------------------------------------------------
+@article{friedman2001greedy,
+  title   = {Greedy Function Approximation: A Gradient Boosting Machine},
+  author  = {Friedman, Jerome H.},
+  journal = {The Annals of Statistics},
+  volume  = {29},
+  number  = {5},
+  pages   = {1189--1232},
+  year    = {2001},
+  doi     = {10.1214/aos/1013203451}
+}

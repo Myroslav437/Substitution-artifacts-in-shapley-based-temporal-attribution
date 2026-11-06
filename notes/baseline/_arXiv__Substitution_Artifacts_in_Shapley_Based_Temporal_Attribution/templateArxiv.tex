@@ -1,0 +1,198 @@
+\documentclass{article}
+
+
+\usepackage{PRIMEarxiv}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage{fancyhdr}       % header
+\usepackage{graphicx}       % graphics
+\graphicspath{{media/}}     % organize your images and other figures under media/ folder
+
+%Header
+\pagestyle{fancy}
+\thispagestyle{empty}
+\rhead{ \textit{ }} 
+
+% Update your Headers here
+\fancyhead[LO]{Running Title for Header}
+% \fancyhead[RE]{Firstauthor and Secondauthor} % Firstauthor et al. if more than 2 - must use \documentclass[twoside]{article}
+
+
+
+  
+%% Title
+\title{Substitution Artifacts in Shapley-Based Temporal Attribution:
+Characterizing and Correcting Masking-Background Bias on
+Mean-Nonstationary Time Series
+%%%% Cite as
+%%%% Update your official citation here when published 
+\thanks{\textit{\underline{Citation}}: 
+\textbf{Authors. Title. Pages.... DOI:000000/11111.}} 
+}
+
+\author{
+  Myroslav Mishchuk \\
+  Silesian University of Technology \\ 
+  Gliwice, Poland \\
+  Lviv Polytechnic National University \\ 
+  Lviv, Ukraine \\
+  \texttt{myroslav.mishchuk@polsl.pl} \\
+   \And
+  Rafał Cupek \\
+  Silesian University of Technology \\ 
+  Gliwice, Poland\\
+  \texttt{rafal.cupek@polsl.pl} \\
+    \And
+  Olena Pavliuk \\
+  Silesian University of Technology \\ 
+  Gliwice, Poland \\
+  Lviv Polytechnic National University \\ 
+  Lviv, Ukraine \\
+  \texttt{olena.pavliuk@polsl.pl} \\
+}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+\lipsum[1]
+\end{abstract}
+
+
+% keywords can be removed
+\keywords{explainable AI \and Shapley values \and temporal attribution \and time series \and mean-nonstationarity \and remaining useful life}
+
+
+\section{Introduction}
+\label{sec:intro}
+
+\subsection{Research questions}\label{sec:setup:rqs}
+\begin{itemize}
+    \item \textbf{RQ1}: How large and how structured is the distortion that default backgrounds (zeros, global mean) induce in temporal Shapley attributions on mean-nonstationary data?
+    \item \textbf{RQ2}: Do trend-aware backgrounds reduce the distortion, and how much of the gap to the learned-imputer ceiling do they close? 
+    \item \textbf{RQ3}: Do the synthetic-benchmark verdicts transfer to the real-world datasets?
+\end{itemize}
+
+\section{Related Work}
+\label{sec:related}
+
+\subsection{The value-function problem in Shapley explanations}
+\label{sec:related:offmanifold}
+
+In the Shapley framework, the value of a feature coalition is computed by evaluating the model with the complementary features replaced or marginalized, and the choice of this value function is known to change the resulting explanation. \citet{frye2021shapley} demonstrated that ``off-manifold'' evaluation --- splicing replacement values into an observed instance without regard for feature dependence --- can produce incorrect explanations, and proposed two on-manifold remedies: substitution via a generative model of the data, and directly learning the value function. \citet{aas2021explaining} developed conditional-expectation approximations for dependent features in the kernel-SHAP setting. The conceptual axis along which these proposals differ is now standard: interventional value functions stay true to the model but evaluate it on unrealistic inputs, while observational/conditional value functions respect the data distribution at the cost of attributing importance to merely correlated features \citep{chen2020true, janzing2020feature, sundararajan2020many}. \citet{yeh2022threading} formalized desiderata spanning both views and showed that both classes are vulnerable to manipulation in low-density regions. The line remains active: recent work casts on-manifold attribution as transport along generative flows \citep{zhang2026axiomatic}.
+ 
+Two properties of this literature matter for the present paper. First, its data model is static and tabular (or, in the recent theoretical work, image-like): the manifold is generic, and the proposed remedies therefore require estimating conditional distributions or training generative surrogates. Second, none of it examines temporally ordered data in which the manifold possesses a \emph{known, low-dimensional organizing variable} --- the position a sequence has reached along its mean trajectory --- which, as we argue, simultaneously structures the off-manifold bias and makes conditioning cheap.
+ 
+
+\subsection{Off-manifold Shapley on tabular data}\label{sec:related:tabular}
+
+\subsection{Masking artifacts and realistic infilling in image XAI}\label{sec:related:image}
+
+\subsection{Realistic perturbations for time-series saliency}\label{sec:related:ts}
+
+\subsection{Temporal Shapley methods and background sensitivity}\label{sec:related:tshap}
+
+\subsection{XAI in prognostics}\label{sec:related:phm}
+
+\subsection{The gap}\label{sec:related:gap}
+
+\lipsum[4] See Section \ref{sec:headings}.
+
+\subsection{Headings: second level}
+\lipsum[5]
+\begin{equation}
+\xi _{ij}(t)=P(x_{t}=i,x_{t+1}=j|y,v,w;\theta)= {\frac {\alpha _{i}(t)a^{w_t}_{ij}\beta _{j}(t+1)b^{v_{t+1}}_{j}(y_{t+1})}{\sum _{i=1}^{N} \sum _{j=1}^{N} \alpha _{i}(t)a^{w_t}_{ij}\beta _{j}(t+1)b^{v_{t+1}}_{j}(y_{t+1})}}
+\end{equation}
+
+\subsubsection{Headings: third level}
+\lipsum[6]
+
+\paragraph{Paragraph}
+\lipsum[7]
+
+\section{Examples of citations, figures, tables, references}
+\label{sec:others}
+\lipsum[8] \cite{kour2014real,kour2014fast} and see \cite{hadash2018estimate}.
+
+The documentation for \verb+natbib+ may be found at
+\begin{center}
+  \url{http://mirrors.ctan.org/macros/latex/contrib/natbib/natnotes.pdf}
+\end{center}
+Of note is the command \verb+\citet+, which produces citations
+appropriate for use in inline text.  For example,
+\begin{verbatim}
+   \citet{hasselmo} investigated\dots
+\end{verbatim}
+produces
+\begin{quote}
+  Hasselmo, et al.\ (1995) investigated\dots
+\end{quote}
+
+\begin{center}
+  \url{https://www.ctan.org/pkg/booktabs}
+\end{center}
+
+
+\subsection{Figures}
+\lipsum[10] 
+See Figure \ref{fig:fig1}. Here is how you add footnotes. \footnote{Sample of the first footnote.}
+\lipsum[11] 
+
+\begin{figure}
+  \centering
+  \fbox{\rule[-.5cm]{4cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
+  \caption{Sample figure caption.}
+  \label{fig:fig1}
+\end{figure}
+
+\subsection{Tables}
+\lipsum[12]
+See awesome Table~\ref{tab:table}.
+
+\begin{table}
+ \caption{Sample table title}
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    \multicolumn{2}{c}{Part}                   \\
+    \cmidrule(r){1-2}
+    Name     & Description     & Size ($\mu$m) \\
+    \midrule
+    Dendrite & Input terminal  & $\sim$100     \\
+    Axon     & Output terminal & $\sim$10      \\
+    Soma     & Cell body       & up to $10^6$  \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:table}
+\end{table}
+
+\subsection{Lists}
+\begin{itemize}
+\item Lorem ipsum dolor sit amet
+\item consectetur adipiscing elit. 
+\item Aliquam dignissim blandit est, in dictum tortor gravida eget. In ac rutrum magna.
+\end{itemize}
+
+
+\section{Conclusion}
+Your conclusion here
+
+\section*{Acknowledgments}
+This was was supported in part by......
+
+%Bibliography
+\bibliographystyle{unsrt}  
+\bibliography{references}  
+
+
+\end{document}

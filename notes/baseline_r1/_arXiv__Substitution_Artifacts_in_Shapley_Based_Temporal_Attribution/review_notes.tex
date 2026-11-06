@@ -1,0 +1,38 @@
+% review_notes.tex -- Notes box, review build only (brief Section 7). Mirrors notes/OPEN_DECISIONS.md.
+\begin{reviewnotes}
+\textbf{How to read this build.} \textcolor{revclaim}{Blue}: method or claim change against the baseline (Related Work); \textcolor{revword}{lilac}: wording fix that changes no claim; margin notes name the source (B\S\ = brief, R\S\ = readiness review, V\S\ = v5.1, P\S\ = style preferences, REF-$n$ = notes/REFERENCES\_AUDIT.md); red margin notes mark deletions. Sections~1 and~3 are new and carry a banner instead of word-level colour. \textcolor{revdec}{Orange}~[D$n$]: text written with the default of an open decision. Orange margin boxes: unverified items. The clean build (\verb|\reviewfalse|) removes all of this.
+
+\medskip\textbf{1. Open decisions (default written in the text).}\\[1pt]
+\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{3.2cm}@{}}
+D1 & B2c (coalition-conditional TAB) included as a variant of B2. & \S3.4 (B2c), Table~2 \\
+D2 & Longer window $L:=96$, from DegradX's declared grid; the ACIIDS sequence length could not be checked (paper not available). & \S3.5, extensions \\
+D3 & B1 = per-channel training mean; TimeSHAP's average event (median) as a variant. ``As in ACIIDS Eq.~3'' is unverified. & \S3.4 (B0--B-pristine) \\
+D4 & ``mean component'' (not ``level''); v5.1's ``level index'' $\to$ ``state index''. & \S3.1; \S2.1 wording \\
+D5 & M-$\psi$ included, marked ``conditional on the pilot''; $\psi$ itself is not specified by any input. & \S3.5, targets and models \\
+D6 & Non-Shapley comparators dropped from the design; discussed in Related Work only. & \S2.4 \\
+D7 & Primary synthetic architecture = DegradX's LSTM; the attention LSTM only in the case study. & \S3.5, \S3.6 \\
+D8 & Threshold $\vartheta$ of the function-identity check left open. The X9 pilot (HUST; IG and occlusion only) fitted to 1--2\,\% of the noise term's SD, with temporal profile error 0.45--0.47 across ten models against a method gap of 0.035 (readiness review \S2.2; unpublished, so not in the text). & \S3.5, M-obs \\
+D9 & Target journal EAAI. Not in the text; see conflict C1. & -- \\
+\end{tabularx}
+
+\medskip\textbf{2. Method constants that no input fixes} (written as symbols; values needed before the experiments): $K$, bin scheme and minimum count of B2; the running summary $h$, cap $d$ and near-duplicate threshold of the index-channel screen; $t_{\min}$, $\mathcal{M}$, $\omega$, $P$ of B3; architecture and training of the B4 imputer; implementation and hyperparameters of the boosted-tree control; $\psi$; the quantiles that define the near and far bands of M2; the positions $u_0$ swept by M5; the precision of permutation sampling for $\phi^\star_b$; amplitude, period and phase of P-GEN; the subsample fractions of E2; the profile of the cross-estimator check. Chosen here and to be confirmed: the construction of the trended null channel (charge-time mapping, random start, held after the other unit's end of life); M-R ensembles with DegradX's ten-member design; recency weighting only (uniform not run).
+
+\medskip\textbf{3. Unverified items} (\verb|% TODO| in the .bib or \verb|\todo| in the text).
+(i) DegradX arXiv identifier unknown. (ii) ACIIDS paper absent from \texttt{./style}: B1 as in its Eq.~3; its sequence length (D2); PCoE cells and preprocessing; attention-LSTM architecture; what the pipeline correction changes; the list of published findings for the case study. Its bibliographic record is verified (Crossref). (iii) TSHAP: only title and abstract accessible; its background-selection rule and its applicability to the LSTM regressor and to cell-level players are unverified (v5.1 \S9 item). (iv) GroupSegment-SHAP is cited in its CIKM~'26 version; the claims were checked against arXiv v2 (2026-08-21), the CIKM text was not accessible. (v) Repository URL of this paper's code. (vi) v5.1 \S9 ``to verify'' list: TimeX now verified (Queen et al., NeurIPS 2023); spurious-regression, Zeiler--Fergus, knee-identification, CRP-detection, C-MAPSS and NARMA references are not used; battery dataset facts are taken from DegradX; arXiv publication status checked 2026-11-03.
+
+\medskip\textbf{4. Conflicts between inputs not resolved.}
+C1: the brief names \texttt{elsarticle}; the project is PRIMEarxiv. Template untouched; an EAAI submission needs a port.
+C2/C5: the ACIIDS findings quoted in v5.1 (Eq.~3, Spearman 0.078, 16.9\,\% pruning) are not used, since the paper is the only allowed source and is unavailable.
+C4: DegradX's README cites it as an ACIIDS~2027 submission; the brief asks for the arXiv entry.
+C9: v5.1's B4 validity gate also used fill surprisal, which needs the density model that the brief's instrument set drops; only the held-out imputation error is kept.
+Brief \S2.5 does not list P-GEN among the extensions, while \S3 item 8 and E5 require it; it is included as a declared extension.
+The brief's ``function-identity gate'' is written as ``function-identity check'' (P\S3.4, plain words); RQ1 and RQ2 omit the labels B0, B1, B-pristine and B4, which are not defined before Section~3 (P\S4.1).
+Bibliography style changed from \texttt{unsrt} to \texttt{unsrtnat} and natbib loaded, as the existing \verb|\citet| calls require; outside \S1--\S3 the template's demo section, the lipsum abstract and the conclusion placeholder remain.
+
+\medskip\textbf{5. Novelty re-check} (searches 2026-11-03, after v5.1's 2026-07-19). No candidate provides contribution 2 or 3.
+Delta-XAI/SWING (Kim et al., ICLR 2026): past window as Integrated Gradients baseline; classification; no ground truth $\to$ \S2.4.
+GRAIL (Menadjiev et al., arXiv:2610.29036): region players with baselines from a conditional generator; ECG classification $\to$ \S2.4.
+TempShap (Zhao et al., arXiv:2610.33330): cell-level Shapley for forecasting with the training mean as background $\to$ \S2.5.
+Zhang et al.\ (arXiv:2603.05093, v2, retitled): path selected by transport, explicitly no manifold claim $\to$ \S2.2 (moved from \S2.1).
+Not added: a synthetic ground-truth framework for images, tabular data and time series (arXiv:2609.30397; no mean-nonstationary regression) and a study of DAG-faithfulness of marginal attribution for time series (arXiv:2607.16236).
+\end{reviewnotes}
